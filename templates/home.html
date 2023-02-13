@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="english">
+   <head>
+      <link rel="stylesheet" type="text/css" href="static/css/home.css" />
+      <!--style = "background-image: url('{{url_for('static', filename = '2.jpg')}}' "-->
+      <body>
+      <form action = "/" method = "post", align ='center' enctype= "multipart/form-data">
+      <!---<font color="green", size = 4> -->
+         <h1><font color="White">WHERE TO GO?</font></h1>
+         <!--<p> Enter the minimum temperature<p>-->
+         <!--<p><input type = "text" name = "lower" required="required" /></p>-->
+         <p><font color="White"> Enter the City</font></p>
+         <p><input type = "text" name = "City" required="required" /></p>
+      <!-- <p> Enter the maximum temperature <p>-->
+      <!--  <p><input type = "text" name = "upper" required="required" /></p> -->
+	      <button class="button button2" type="submit">Search</button>
+      </form>
+      <div>
+         <div class="main">
+
+            <div class="d1"></div>
+            <div class="d2"></div>
+            <div class="d3">
+               <div class="holo" align="center">
+                  {% for item in result %}
+                  <br>{{item}}</br>
+                  {% endfor %}
+               </div>
+            </div>
+            <div class="d4"></div>
+        </div>
+      </div>
+         
+      
+   </body>
+</html>
