@@ -1,4 +1,4 @@
-from flask import Flask, app, render_template, url_for, request
+from flask import Flask, app, render_template, request
 from E import get_weather
 import asyncio
 app = Flask(__name__)
